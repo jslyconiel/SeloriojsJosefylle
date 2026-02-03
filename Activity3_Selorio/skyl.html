@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My JS Practice</title>
+    <link rel="stylesheet" href="skyler.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>JavaScript Practice</h2>
+
+        <button onclick="sayHello()" class="orange-btn">Click Me</button>
+
+        <div class="input-stack">
+            <input type="text" id="userInput" placeholder="Enter text">
+            <button onclick="showInput()" class="orange-btn">Show Text</button>
+        </div>
+        
+        <p id="output"></p>
+
+        <p id="hoverText">Basta mao nana</p>
+    </div>
+
+    <script>
+        
+        function sayHello() {
+            alert("Hallo mga kabuang!");
+        }
+
+        function showInput() {
+            let text = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = text;
+        }
+       
+        document.getElementById("hoverText").onmouseover = function() {
+            this.style.color = "blue";
+        };
+
+        document.getElementById("hoverText").onmouseout = function() {
+            this.style.color = "black";
+        };
+    </script>
+
+</body>
+</html>
